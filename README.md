@@ -22,7 +22,7 @@ We've tried to make the instructions as clear as possible, so if you notice any 
 
 ## Project setup
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Vite](https://vitejs.dev/guide/).
 
 Run `npm install` to install the project dependencies. These are required for the project setup.
 
