@@ -24,7 +24,7 @@ We've tried to make the instructions as clear as possible, so if you notice any 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Run `npm install` or `yarn` to install the project dependencies. These are required for the project setup.
+Run `npm install` to install the project dependencies. These are required for the project setup.
 
 You won't need to add any additional dependencies to complete the challenge.
 
