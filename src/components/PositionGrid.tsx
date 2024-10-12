@@ -1,5 +1,4 @@
 import type { Position } from '../types';
-
 import './PositionGrid.css';
 
 export interface PositionGridProps {
@@ -9,23 +8,30 @@ export interface PositionGridProps {
 export function PositionGrid(props: PositionGridProps): JSX.Element | null {
   const { positions } = props;
   return (
-    <table className="PositionGrid">
-      <thead>
-        <tr>
-          <th>Ticker</th>
-          <th>Name</th>
-          <th>Exposure</th>
-        </tr>
-      </thead>
-      <tbody>
-        {positions.map((position) => (
-          <tr key={position.id}>
-            <td>{position.ticker}</td>
-            <td>{position.name}</td>
-            <td>{position.exposure}</td>
-          </tr>
+    <div className="position-grid">
+      <div role="rowgroup" className="flex-header">
+        <div role="columnheader" className="flex-cell ticker-column">Ticker</div>
+        <div role="columnheader" className="flex-cell name-column">Name</div>
+        <div role="columnheader" className="flex-cell exposure-column">Exposure</div>
+      </div>
+
+      <div role="rowgroup">
+        {positions.map((stock) => (
+          <div role="row" className="flex-row" key={stock.id}>
+            <div role="cell" className="flex-cell ticker-column ticker-column-data">{stock.ticker}</div>
+            <div role="cell" className="flex-cell name-column name-column-data">{stock.name}</div>
+            <div
+              role="cell"
+              className={`flex-cell exposure-column exposure-column-data ${
+                stock.exposure >= 0 ? 'positive' : 'negative'
+              }`}
+            >
+              {stock.exposure?.toLocaleString()}
+            </div>
+          </div>
         ))}
-      </tbody>
-    </table>
+      </div>
+      <div className='position-grid-border-top'></div>
+    </div>
   );
 }
