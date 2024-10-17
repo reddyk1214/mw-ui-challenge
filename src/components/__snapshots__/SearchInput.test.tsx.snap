@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SearchInput Component > renders the search input with correct snapShot 1`] = `
+<DocumentFragment>
+  <div
+    class="SearchInputContainer"
+  >
+    <div
+      class="SearchIconContainer"
+    >
+      <img
+        alt="Search Icon"
+        class="SearchIcon"
+        src="/src/icons/search_16px.svg"
+      />
+    </div>
+    <input
+      aria-label="Search positions"
+      class="SearchInput"
+      data-testid="search-input"
+      placeholder="Search"
+      type="search"
+      value="AAPL"
+    />
+  </div>
+</DocumentFragment>
+`;

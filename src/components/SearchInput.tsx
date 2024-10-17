@@ -1,9 +1,12 @@
 import './SearchInput.css';
-import searchIcon from '../icons/search_16px.svg'; // Adjust path if necessary
+import searchIcon from '../icons/search_16px.svg';
 
-export interface SearchInputProps {}
+interface SearchInputProps {
+  searchText: string;
+  onSearch: (text: string) => void;
+}
 
-export function SearchInput(_props: SearchInputProps): JSX.Element | null {
+export function SearchInput({ searchText, onSearch }: SearchInputProps): JSX.Element | null {
   return (
     <div className="SearchInputContainer">
       <div className="SearchIconContainer">
@@ -13,7 +16,10 @@ export function SearchInput(_props: SearchInputProps): JSX.Element | null {
         data-testid="search-input"
         className="SearchInput"
         type="search"
+        value={searchText}
+        onChange={(e) => onSearch(e.target.value)} 
         placeholder="Search"
+        aria-label="Search positions"
       />
     </div>
   );
