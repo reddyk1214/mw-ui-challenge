@@ -1,0 +1,97 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders PositionGrid with positive and negative stock exposure 1`] = `
+<div>
+  <div
+    aria-label="Position data table"
+    class="position-grid"
+    role="table"
+  >
+    <div
+      class="flex-header"
+      role="rowgroup"
+    >
+      <div
+        class="flex-cell ticker-column"
+        id="header-ticker"
+        role="columnheader"
+      >
+        Ticker
+      </div>
+      <div
+        class="flex-cell name-column"
+        id="header-name"
+        role="columnheader"
+      >
+        Name
+      </div>
+      <div
+        class="flex-cell exposure-column"
+        id="header-exposure"
+        role="columnheader"
+      >
+        Exposure
+      </div>
+    </div>
+    <div
+      role="rowgroup"
+    >
+      <div
+        class="flex-row"
+        role="row"
+      >
+        <div
+          aria-labelledby="header-ticker"
+          class="flex-cell ticker-column-data"
+          role="cell"
+        >
+          AAPL
+        </div>
+        <div
+          aria-labelledby="header-name"
+          class="flex-cell name-column-data"
+          role="cell"
+        >
+          Apple Inc
+        </div>
+        <div
+          aria-labelledby="header-exposure"
+          class="flex-cell exposure-column exposure-column-data positive"
+          role="cell"
+        >
+          1,000
+        </div>
+      </div>
+      <div
+        class="flex-row"
+        role="row"
+      >
+        <div
+          aria-labelledby="header-ticker"
+          class="flex-cell ticker-column-data"
+          role="cell"
+        >
+          TSLA
+        </div>
+        <div
+          aria-labelledby="header-name"
+          class="flex-cell name-column-data"
+          role="cell"
+        >
+          Tesla Inc
+        </div>
+        <div
+          aria-labelledby="header-exposure"
+          class="flex-cell exposure-column exposure-column-data negative"
+          role="cell"
+        >
+          -500
+        </div>
+      </div>
+    </div>
+    <div
+      class="position-grid-border-top"
+    />
+  </div>
+</div>
+`;

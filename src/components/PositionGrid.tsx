@@ -9,7 +9,7 @@ export function PositionGrid(props: PositionGridProps): JSX.Element | null {
   const { positions } = props;
 
   return (
-    <div className="position-grid" role="grid" aria-label="Position data grid">
+    <div className="position-grid" role="table" aria-label="Position data table">
       <div role="rowgroup" className="flex-header">
         <div role="columnheader" className="flex-cell ticker-column" id="header-ticker">Ticker</div>
         <div role="columnheader" className="flex-cell name-column" id="header-name">Name</div>
@@ -17,24 +17,24 @@ export function PositionGrid(props: PositionGridProps): JSX.Element | null {
       </div>
 
       <div role="rowgroup">
-        {positions.map((stock) => (
+        {positions?.map((stock) => (
           <div role="row" className="flex-row" key={stock.id}>
             <div
-              role="gridcell"
+              role="cell"
               className="flex-cell ticker-column-data"
               aria-labelledby="header-ticker"
             >
               {stock.ticker}
             </div>
             <div
-              role="gridcell"
+              role="cell"
               className="flex-cell name-column-data"
               aria-labelledby="header-name"
             >
               {stock.name}
             </div>
             <div
-              role="gridcell"
+              role="cell"
               className={`flex-cell exposure-column exposure-column-data ${
                 stock.exposure >= 0 ? 'positive' : 'negative'
               }`}
