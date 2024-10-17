@@ -5,7 +5,7 @@ export function createTransform(searchText: string): (positions: Array<Position>
 
   return (positions: Array<Position>): Array<Position> => {
     if (!normalizedSearchText) {
-      return positions;
+      return positions
     }
 
     return positions
