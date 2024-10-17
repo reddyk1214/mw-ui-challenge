@@ -1,13 +1,42 @@
+/* index.css */
+:root {
+  /* Color Palette */
+  --color-background: #1d1d1d;
+
+  /* Typography */
+  --font-family: 'Roboto', sans-serif;
+  --font-weight-normal: normal;
+
+  /* Font Sizes */
+  --font-size-xs: 10px;
+  --font-size-sm: 12px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+
+  /* Spacing */
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+
+  /* Sizing */
+  --size-mid: 16px;
+  --size-lg: 24px;
+}
+
 html,
 body {
   height: 100%;
+  font-family: var(--font-family);
 }
 
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 main {
   width: 320px;
 }
+
